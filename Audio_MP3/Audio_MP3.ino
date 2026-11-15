@@ -80,10 +80,15 @@ Arduino_ESP32RGBPanel *rgb_panel = new Arduino_ESP32RGBPanel(
     HSYNC_POLARITY, HSYNC_FRONT_PORCH, HSYNC_PULSE_WIDTH, HSYNC_BACK_PORCH,
     VSYNC_POLARITY, VSYNC_FRONT_PORCH, VSYNC_PULSE_WIDTH, VSYNC_BACK_PORCH,
     PCLK_ACTIVE_NEG, PCLK_FREQ,
-    false,   // useBigEndian
+    
+    /* The settings below are not included in the files provided by the board manufacturer.
+     * They help to reduce the effects of DMA timing issues causing jitter and random artifacts on the display
+     */
+
+    false,   // useBigEndian        
     0,       // de_idle_high
     0,       // pclk_idle_high
-    8000     // bounce buffer size
+    8000     // bounce buffer size (10 scan lines).  
 );
 
 Arduino_RGB_Display *gfx = new Arduino_RGB_Display(
