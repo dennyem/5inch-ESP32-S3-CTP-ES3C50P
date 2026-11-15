@@ -1,6 +1,10 @@
 # 5inch-ESP32-S3-CTP-ES3C50P
 ESP32S3 Board with 5inch Display attached.  Available from Alibaba and others.
 
+https://www.alibaba.com/product-detail/ESP32-S3-5-Inch-IPS-Capacitive_1601893743731.html?spm=a2756.order-detail-ta-bn-b.0.0.1ed3f19cZh78El
+
+
+
 The example code that is available for this board is flawed, in that the display (RGB565 direct port from the ESP32S3) can experience severe jitter.
 
 This repository contains the audio (MP3 I2S) player example with comments translated to English and a correction to make the display more stable.
